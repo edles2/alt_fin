@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.coverage
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node / Hardhat
+node_modules/
+artifacts/
+cache/
+
+# OS
+.DS_Store
