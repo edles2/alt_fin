@@ -41,7 +41,7 @@ class BacktestRating:
         else:
             drawdown_score = min(
                 2.5,
-                max(0.0, (1 + drawdown / self.max_drawdown_threshold) * 2.5),
+                max(0.0, (1 - drawdown / self.max_drawdown_threshold) * 2.5),
             )
 
         # Portfolio growth score — 50%, capped at 5.0

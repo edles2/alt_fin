@@ -1,7 +1,7 @@
 # python203 — Tokenized Reward System for Financial Backtesting
 
-> Master 203 — Python Programming · Paris Dauphine-PSL  
-> Amandine · Edouard · Benoit
+> Master 203 — Alternative Finance · Paris Dauphine-PSL  
+> Amandine Esteve · Edouard Lesbre · Benoit Faivre
 
 ## Overview
 
