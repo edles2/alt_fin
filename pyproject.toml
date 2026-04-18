@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "python203"
+name = "altfinance"
 version = "0.1.0"
 description = "Tokenized reward system for financial backtesting — Master 203 Alternative Finance, Paris Dauphine-PSL"
 authors = [
-    {name = "Amandine Esteve", email = ""},
-    {name = "Edouard Lesbre",  email = ""},
+    {name = "Amandine Esteve", email = "amandine.esteve@dauphine.eu"},
+    {name = "Edouard Lesbre",  email = "edouard.lesbre@dauphine.eu"},
     {name = "Benoit Faivre",   email = "benoit.faivre@dauphine.eu"},
 ]
 readme = "README.md"

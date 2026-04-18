@@ -96,7 +96,7 @@ class VolumeBacktest:
     Example::
 
         from datetime import datetime
-        from python203 import VolumeBacktest
+        from altfinance import VolumeBacktest
 
         bt = VolumeBacktest(
             initial_date=datetime(2023, 1, 1),

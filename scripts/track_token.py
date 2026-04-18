@@ -1,4 +1,4 @@
-"""Inspect the Master203token (203T) deployed on the Sepolia testnet.
+"""Inspect the AltFinanceToken (ALTFIT) deployed on the Sepolia testnet.
 
 Usage:
     export INFURA_PROJECT_ID=your_key

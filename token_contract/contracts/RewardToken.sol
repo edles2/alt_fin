@@ -15,7 +15,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  * 0xA0f0a2D53b3476c50F2Cf24307F8a1Cd3c758254
  */
 contract RewardToken is ERC20 {
-    constructor(address initialOwner) ERC20("Master203token", "203T") {
+    constructor(address initialOwner) ERC20("AltFinanceToken", "ALTFIT") {
         _mint(initialOwner, 203 * 10 ** decimals());
     }
 }

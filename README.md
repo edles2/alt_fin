@@ -1,11 +1,11 @@
-# Alternative finance — Tokenized Reward System for Financial Backtesting
+# Alternative Finance — Tokenized Reward System for Financial Backtesting
 
 > Master 203 — Alternative Finance · Paris Dauphine-PSL  
 > Amandine Esteve · Edouard Lesbre · Benoit Faivre
 
 ## Overview
 
-**python203** bridges quantitative finance and blockchain technology.
+**altfinance** bridges quantitative finance and blockchain technology.
 Users submit a trading strategy; the package backtests it, scores the result, and automatically rewards the user with ERC-20 tokens proportional to the strategy's performance.
 
 ```
@@ -17,8 +17,8 @@ Trading strategy ──► Backtest ──► Score (0 – 10) ──► Token t
 ## Project structure
 
 ```
-python203/
-├── src/python203/
+altfinance/
+├── src/altfinance/
 │   ├── backtest.py          # VolumeBacktest  +  TradeSignals
 │   ├── evaluator.py         # BacktestRating
 │   └── token_transfer.py    # TokenTransfer
@@ -66,7 +66,7 @@ cp .env.example .env
 
 ```python
 from datetime import datetime
-from python203 import VolumeBacktest
+from altfinance import VolumeBacktest
 
 bt = VolumeBacktest(
     initial_date=datetime(2023, 1, 1),
@@ -91,7 +91,7 @@ metrics = bt.run()
 | Maximum Drawdown | 25 % | Risk exposure (threshold = −40 %) |
 
 ```python
-from python203 import BacktestRating
+from altfinance import BacktestRating
 
 score = BacktestRating().rate_backtest(metrics)
 print(f"Score: {score} / 10")
@@ -103,7 +103,7 @@ print(f"Score: {score} / 10")
 
 ```python
 import os
-from python203 import TokenTransfer
+from altfinance import TokenTransfer
 
 tt = TokenTransfer(
     private_key=os.environ["PRIVATE_KEY"],
@@ -118,15 +118,14 @@ print(f"Transaction: {tx_hash}")
 
 ---
 
-## Token — Master203token (203T)
+## Token — AltFinanceToken (ALTFIT)
 
-An ERC-20 token deployed on the **Sepolia testnet** with a **fixed supply of 203 tokens**, minted once to the deployer at deployment. No additional minting is possible, ensuring a transparent and finite reward pool.
+An ERC-20 token deployed on the **Sepolia testnet** with a fixed supply, minted once to the deployer at deployment. No additional minting is possible, ensuring a transparent and finite reward pool.
 
 | Property | Value |
 |---|---|
-| Name | Master203token |
-| Symbol | 203T |
-| Total supply | 203 |
+| Name | AltFinanceToken |
+| Symbol | ALTFIT |
 | Contract | `0xA0f0a2D53b3476c50F2Cf24307F8a1Cd3c758254` |
 | Network | Ethereum Sepolia testnet |
 
