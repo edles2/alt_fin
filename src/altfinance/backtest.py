@@ -66,7 +66,7 @@ class TradeSignals:
         daily_returns = df["Portfolio Value"].pct_change().dropna()
         excess_returns = daily_returns - (_RISK_FREE_RATE / 252)
         sharpe = (
-            excess_returns.mean() / excess_returns.std()
+            excess_returns.mean() / excess_returns.std() * (252 ** 0.5)
             if excess_returns.std() != 0
             else 0.0
         )
